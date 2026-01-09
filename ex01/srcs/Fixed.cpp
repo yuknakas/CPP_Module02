@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 11:13:14 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/01/06 17:05:56 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/01/09 14:04:17 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,14 @@ Fixed::Fixed( const int i_param )
 
 Fixed::Fixed( const float f_param )
 {
-	std::cout << "Int Constructor Called" << std::endl;
-	this->m_value = std::roundf(f_param * (1 << this->m_fracBits));
+	std::cout << "Float Constructor Called" << std::endl;
+	this->m_value = roundf(f_param * (1 << this->m_fracBits));
 }
 
-Fixed::Fixed( const Fixed &other): m_value(other.m_value)
+Fixed::Fixed( const Fixed &other)
 {
 	std::cout << "Copy Constructor Called" << std::endl;
+	*this = other;
 }
 
 Fixed	&Fixed::operator=( const Fixed &other )
@@ -44,7 +45,7 @@ Fixed	&Fixed::operator=( const Fixed &other )
 
 Fixed::~Fixed()
 {
-	std::cout << "Default Destructor Called" << std::endl;
+	std::cout << "Destructor Called" << std::endl;
 }
 
 int	Fixed::getRawBits( void )const

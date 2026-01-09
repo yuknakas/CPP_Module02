@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 11:08:02 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/01/06 17:03:25 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/01/09 14:01:27 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ private:
 	static const int	m_fracBits = 8;
 };
 
+std::ostream &operator<<(std::ostream &os, const Fixed &fixed);
 
 #endif
