@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 11:13:14 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/01/09 16:15:30 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/05 16:07:12 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ Fixed	&Fixed::operator=( const Fixed &other )
 {
 	// std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &other)
-		this->m_value = other.m_value;
+		this->m_value = other.getRawBits();
 	return (*this);
 }
 
@@ -83,7 +83,7 @@ bool	Fixed::operator>( const Fixed &x ) const
 
 bool	Fixed::operator<( const Fixed &x ) const
 {
-	return (this->toFloat() > x.toFloat());
+	return (this->toFloat() < x.toFloat());
 }
 
 bool	Fixed::operator>=( const Fixed &x ) const
@@ -159,28 +159,28 @@ Fixed	Fixed::operator--( int )
 // min/max
 Fixed	&Fixed::min( Fixed &x, Fixed &y )
 {
-	if (x.toFloat() <= y.toFloat())
+	if (x <= y)
 		return (x);
 	return (y);
 }
 
 const Fixed	&Fixed::min( const Fixed &x, const Fixed &y )
 {
-	if (x.toFloat() <= y.toFloat())
+	if (x <= y)
 		return (x);
 	return (y);
 }
 
 Fixed	&Fixed::max( Fixed &x, Fixed &y )
 {
-	if (x.toFloat() >= y.toFloat())
+	if (x >= y)
 		return (x);
 	return (y);
 }
 
 const Fixed	&Fixed::max( const Fixed &x, const Fixed &y )
 {
-	if (x.toFloat() >= y.toFloat())
+	if (x >= y)
 		return (x);
 	return (y);
 }

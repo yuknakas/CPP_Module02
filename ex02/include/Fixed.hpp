@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 11:08:02 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/01/09 16:18:54 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/05 12:44:47 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ public:
 	Fixed( void );
 	Fixed( const int i_param );
 	Fixed( const float f_param );
+	// copy constructor
 	Fixed( const Fixed &other );
 	// destructor
 	~Fixed();
-	
 	// copy assignment operator
 	Fixed	&operator=( const Fixed &other );
 

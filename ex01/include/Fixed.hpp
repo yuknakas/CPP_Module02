@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 11:08:02 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/01/09 14:01:27 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/05 15:58:07 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,13 @@ private:
 };
 
 std::ostream &operator<<(std::ostream &os, const Fixed &fixed);
+
+#define RESET "\033[0m"
+#define RED "\033[31m"
+#define GREEN "\033[32m"
+#define YELLOW "\033[33m"
+#define BLUE "\033[34m"
+#define MAGENTA "\033[35m"
+#define CYAN "\033[36m"
 
 #endif

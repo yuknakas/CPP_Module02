@@ -6,12 +6,12 @@
 #    By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/05 11:23:16 by yuknakas          #+#    #+#              #
-#    Updated: 2026/01/05 11:26:18 by yuknakas         ###   ########.fr        #
+#    Updated: 2026/07/05 12:41:23 by yuknakas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	a.out
-CPP		=	c++ -Wall -Wextra -Werror -std=c++98
+CPP		=	c++ -Wall -Wextra -Werror -std=c++98 -pedantic
 
 SRCS	=	srcs/main.cpp srcs/Fixed.cpp
 OBJS	=	$(SRCS:.cpp=.o)

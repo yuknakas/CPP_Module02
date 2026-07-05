@@ -6,7 +6,7 @@
 /*   By: yuknakas <yuknakas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 11:08:02 by yuknakas          #+#    #+#             */
-/*   Updated: 2026/01/05 11:20:59 by yuknakas         ###   ########.fr       */
+/*   Updated: 2026/07/05 15:49:36 by yuknakas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,10 @@ private:
 	static const int	m_fracBits = 8;
 };
 
+#define RED "\033[31m"
+#define GREEN "\033[32m"
+#define YELLOW "\033[33m"
+#define BLUE "\033[34m"
+#define RESET "\033[0m"
 
 #endif
